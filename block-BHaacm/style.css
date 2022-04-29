@@ -1,0 +1,292 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Custom Styles */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 12px;
+}
+:root {
+    --primary: #212946;
+    --secondar: #36b667;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    color: #36b667;
+}
+
+.btn {
+    padding: 1.2rem 1.5rem;
+    color: white;
+    background-color: #36b667;
+    display: inline-block;
+    font-size: 1.5rem;
+    border-radius: 3px;
+}
+
+
+.border {
+    border: 1px solid burlywood;
+}
+/* Flex */
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* .item-center {
+    display: flex;
+    align-items: center;
+} */
+
+.flex-48 {
+    flex: 0 1 48%;
+}
+
+.flex-30 {
+    flex: 0 1 30%;
+}
+
+
+.padding {
+    padding:1.5rem 5rem;
+}
+/* Padding Side */
+.paddings {
+    padding: 0 1.5rem;
+
+}
+/* Padding Top */
+.paddingt {
+    padding: 1.5rem 0;
+
+}
+
+/* Margin side */
+.margins {
+    margin: 0 1rem;
+
+}
+
+.margint {
+    margin: 1rem 0;
+}
+
+
+/* header */
+
+header {
+    background: var(--primary) ;
+    width: 100vw;
+}
+
+header ul li {
+    margin: 0 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+header img {
+    height: 100%;
+}
+
+/* Main */
+
+/* Hero */
+
+.hero-cont {
+    background-color: #e9ecfc;
+    width: 100vw;
+}
+
+.hero-cont img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.hero-cont p {
+    color: rgb(99, 99, 99);
+    font-size: 2rem;
+    line-height: 1.5;
+
+}
+
+/* Blog */
+
+.blog {
+    padding: 50px 0;
+    flex-wrap: wrap;
+}
+
+h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    padding: 10px 0;
+}
+
+h3 {
+    font-size: 2.5rem;
+}
+
+.blog p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: grey;
+}
+
+.blog .btn {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+}
+
+
+
+/* Footer */
+
+footer {
+    background-color: var(--primary);
+    padding: 4rem;
+}
+
+small {
+    color: rgb(191, 191, 191);
+    font-size: 1.5rem;
+    
+}
+
+footer img {
+    width: 3rem;
+    height: 3rem;
+}
+
+
+/* Mobile CSS */
+
+@media screen and (max-width: 768px) {
+
+    html {
+        font-size: 70%;
+    }
+
+    .flex-48 {
+        flex: 1 1 100%;
+    }
+    
+    .flex-30 {
+        flex: 1 1 100%;
+    }
+    
+
+    header {
+        flex-direction: column;
+    }
+    header nav {
+        padding: 20px 0;
+    }
+
+    .hero-cont {
+        flex-direction: column;
+        }
+
+    .hero-cont article {
+        order: 2;
+    }
+
+    .box-cont {
+        flex-wrap: wrap;
+    }
+
+    footer div {
+        flex-direction: column;
+    }
+
+    footer .social {
+        padding: 20px 0;
+    }
+
+    .blog img {
+        width: 100%;
+    }
+
+
+    
+}
+
+@media screen and (max-width: 992px) {
+    .flex-48 {
+        flex: 1 1 100%;
+        margin: 2rem 0;
+    }
+    
+    .flex-30 {
+        flex: 1 1 100%;
+        margin: 2rem 0;
+    }
+
+    .blog img  {
+        width: 100%;
+    }
+    
+
+}
