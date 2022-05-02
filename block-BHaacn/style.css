@@ -60,7 +60,7 @@ html {
     font-size: 10px;
 }
 
-* {
+* , *::before, *::after{
     box-sizing: border-box;
 }
 
@@ -252,11 +252,11 @@ h3 {
 
 /* Schedule */
 
-.schedule span {
+.schedule .sept div {
     display: flex;
     border-radius: 50%;
-    height: 15rem;
-    width: 15rem;
+    height: 13rem;
+    width: 13rem;
     border: 3px dashed var(--primary);
     align-items: center;
     justify-content: center;
@@ -273,10 +273,11 @@ h3 {
     display: flex; 
     flex-direction: column;
     height: 100%;
-    position: relative;
+    /* position: relative; */
     flex: 0 1 20%;
     justify-content: space-between;
     align-items: center;
+    border: 1px solid blue;
 }
 
 .sept-cont {
@@ -291,10 +292,6 @@ h3 {
 
 .schedule strong {
     display: inline-block;
-}
-
-.schedule figure {
-    flex: 0 1 20%;
 }
 
 
@@ -324,6 +321,7 @@ h3 {
 }
 
 .schedule-img-text {
+    margin: 3rem 0;
 }
 
 .schedule-img-text article {
@@ -352,14 +350,16 @@ h3 {
     font-size: 2rem;
 }
 
-.schedule .v-line {
-    border: dashed 0.2rem var(--primary);
-    position: absolute;
+.schedule #v-line {
+    border-left: dashed 0.2rem var(--primary);
+    position: sticky;
+    /* position: relative;
     left: 50%;
     top: 0;
-    right: 50%;
-    height: 100%;
-    z-index: 1;
+    right: 50%; */
+    margin: auto 0;
+    z-index: -1;
+    height: 10rem;
 }
 
 /* Event Numbers */
@@ -683,14 +683,14 @@ h5 {
     .schedule-img-text {
         flex-direction: column;
         padding: 3rem 0;
-        flex: 1 1 22%;
+        flex: 0 1 22%;
     }
 
   
 
     .v-line {
         display: none ;
-        position: static;
+        position: relative;
     }
 
     .event-numbers {
